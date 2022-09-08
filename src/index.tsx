@@ -1,14 +1,15 @@
 import ReactDOM from "react-dom";
+import App from "./components/App";
 
-const App = () => {
+const Index = () => {
     return(
         <div>
-
+            <App/>
         </div>
     )
 }
 
 ReactDOM.render(
-    <App/>,
+    <Index/>,
     document.querySelector("#root")
 )
