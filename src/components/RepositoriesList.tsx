@@ -1,12 +1,20 @@
-const RepositoriesList: React.FC = () => {
-    return (
-        <div>
-            <form >
-                <input />
-                <button>Search</button>
-            </form>
-        </div>
-    )
-}
+import { useState } from "react";
 
-export default RepositoriesList
+const RepositoriesList: React.FC = () => {
+  const [term, setTerm] = useState("");
+
+  const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+  };
+
+  return (
+    <div>
+      <form onSubmit={onSubmit}>
+        <input value={term} onChange={(e) => setTerm(e.target.value)} />
+        <button>Search</button>
+      </form>
+    </div>
+  );
+};
+
+export default RepositoriesList;
